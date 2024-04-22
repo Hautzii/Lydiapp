@@ -1,0 +1,24 @@
+button {
+    background-color: #838cf1;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-size: 1.2rem;
+    width: 100px;
+    margin-top: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interns {
+    text-align: center;
+    width: 300px;
+}
+
+img {
+    border-radius: .25rem;
+    height: 200px;
+}
