@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create Intern') }}
+            {{ __('Ajouter un stagiaire') }}
         </h2>
     </x-slot>
 
@@ -23,6 +23,7 @@
                         <input type="email" id="email" name="email">
                         <label for="formation_id">Formation :</label>
                         <select id="formation_id" name="formation_id">
+                            <option value="0">Choisir une formation...</option>
                             @foreach ($formations as $formation)
                                 <option value="{{ $formation->id }}">{{ $formation->name }}</option>
                             @endforeach

@@ -28,7 +28,7 @@
                         <label for="formation_id" class="self-start">Formation :</label>
                         <select id="formation_id" name="formation_id" class="mb-4 text-center rounded-sm">
                             @foreach ($formations as $formation)
-                                <option value="{{ $formation->id }}">{{ $formation->name }}</option>
+                                <option value="{{ $formation->id }}" {{ $intern->formation->id == $formation->id ? 'selected' : '' }}>{{ $formation->name }}</option>
                             @endforeach
                         </select>
                         <button type="submit" class="submit_button">Envoyer</button>
