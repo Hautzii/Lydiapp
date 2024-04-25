@@ -17,3 +17,7 @@
 .add_formation {
     margin-left: 1rem;
 }
+
+.search-bar {
+    border-radius: .25rem;
+}
