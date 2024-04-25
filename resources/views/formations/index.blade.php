@@ -14,7 +14,7 @@
             </div>
             <div>
                 <form method="GET" action="{{ route('formations.index') }}">
-                    <input type="text" name="search" placeholder="Rechercher..."
+                    <input class="search-bar" type="text" name="search" placeholder="Rechercher..."
                            value="{{ request()->query('search') }}">
                     <button type="submit"></button>
                 </form>
