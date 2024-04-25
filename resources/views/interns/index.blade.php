@@ -27,7 +27,6 @@
                     <input type="hidden" name="favorites" value="{{ request()->query('favorites', 0) }}">
                     <button type="submit"></button>
                 </form>
-                </form>
             </div>
         </div>
     </x-slot>

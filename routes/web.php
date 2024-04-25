@@ -16,10 +16,12 @@ Route::get('/dashboard', function () {
 Route::get('/interns', [InternController::class, 'index'])->name('interns.index');
 Route::get('/formations', [FormationController::class, 'index'])->name('formations.index');
 
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 Route::middleware([App\Http\Middleware\IsAdmin::class])->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
     Route::get('/interns/create', [InternController::class, 'create'])->name('interns.create');
     Route::post('/interns/create', [InternController::class, 'store'])->name('interns.store');
     Route::get('/interns/{intern}/edit', [InternController::class, 'edit'])->name('interns.edit');
