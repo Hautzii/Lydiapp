@@ -23,8 +23,11 @@ jobs:
       - name: Start Root Shell
         run: sudo -s # Start a root shell to run the following commands
 
+      - name: Check location
+        run: pwd # Check the current directory
+
       - name: Change Directory
-        run: cd /home/ubuntu/var/www/Lydiapp # Change to the project directory
+        run: cd /var/www/Lydiapp # Change to the project directory
 
       - name: Pull Changes from GitHub
         run: git pull origin main # Pull the latest changes from the main branch
