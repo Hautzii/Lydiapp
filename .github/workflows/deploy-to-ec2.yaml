@@ -25,4 +25,3 @@ jobs:
             cd /var/www/Lydiapp # Change to the project directory
             git pull origin main # Pull the latest changes from the main branch
             php artisan migrate --force # Run database migrations
-            npm run build # Build the frontend assets
