@@ -13,27 +13,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2 # Checkout the repository
 
-      - name: Set Working Directory
-        run: cd $GITHUB_WORKSPACE # Set the working directory to the repository root
-
-      - name: SSH into EC2 Server
+      - name: SSH into EC2 Server and Deploy
         uses: appleboy/ssh-action@master # Use the SSH action to connect to the EC2 instance
         with:
           host: ${{ secrets.EC2_HOST }} # EC2 instance IP or hostname
           username: ${{ secrets.EC2_USERNAME }} # EC2 instance username
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Private SSH key stored as a GitHub secret
-
-      - name: Start Root Shell
-        run: sudo -s # Start a root shell to run the following commands
-
-      - name: Check location
-        run: pwd # Check the current directory
-
-      - name: Change Directory
-        run: cd /var/www/Lydiapp # Change to the project directory
-
-      - name: Pull Changes from GitHub
-        run: git pull origin main # Pull the latest changes from the main branch
-
-      - name: Run Migrations
-        run: php artisan migrate --force # Run database migrations
+          script: |
+            sudo -s # Start a root shell to run the following commands
+            cd /var/www/Lydiapp # Change to the project directory
+            git pull origin main # Pull the latest changes from the main branch
+            php artisan migrate --force # Run database migrations
