@@ -1,0 +1,33 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2 # Checkout the repository
+
+      - name: SSH into EC2 Server
+        uses: appleboy/ssh-action@master # Use the SSH action to connect to the EC2 instance
+        with:
+          host: ${{ secrets.EC2_HOST }} # EC2 instance IP or hostname
+          username: ${{ secrets.EC2_USERNAME }} # EC2 instance username
+          key: ${{ secrets.SSH_PRIVATE_KEY }} # Private SSH key stored as a GitHub secret
+
+      - name: Start Root Shell
+        run: sudo -s
+
+      - name: Change Directory
+        run: cd /var/www/Lydiapp
+
+      - name: Pull Changes from GitHub
+        run: git pull origin main
+
+      - name: Run Migrations
+        run: php artisan migrate --force
