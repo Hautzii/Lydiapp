@@ -13,6 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2 # Checkout the repository
 
+      - name: Set Working Directory
+        run: cd $GITHUB_WORKSPACE # Set the working directory to the repository root
+
       - name: SSH into EC2 Server
         uses: appleboy/ssh-action@master # Use the SSH action to connect to the EC2 instance
         with:
