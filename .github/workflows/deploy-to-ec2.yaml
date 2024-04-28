@@ -23,5 +23,6 @@ jobs:
             sudo chown -R ${{ secrets.EC2_USERNAME }}:${{ secrets.EC2_USERNAME}} /var/www/Lydiapp # Change the owner of the project directory
             sudo -s # Start a root shell to run the following commands
             cd /var/www/Lydiapp # Change to the project directory
+            ls
             git pull origin main # Pull the latest changes from the main branch
             php artisan migrate --force # Run database migrations
