@@ -25,4 +25,5 @@ jobs:
             git pull origin main # Pull the latest changes from the main branch
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
-            npm run build # Install Node.js dependencies and compile assets
+            chmod +x ./node_modules/@esbuild/linux-x64/bin/esbuild # Make the esbuild binary executable
+            npm run build # Compile assets
