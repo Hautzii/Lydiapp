@@ -24,6 +24,8 @@ jobs:
             sudo find /var/www/Lydiapp -type d -exec chmod 755 {} \; # Set directory permissions
             sudo find /var/www/Lydiapp -type f -exec chmod 644 {} \; # Set file permissions
             sudo -s # Start a root shell to run the following commands
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - # Install Node.js and npm
+            sudo apt-get install -y nodejs
             cd /var/www/Lydiapp # Change to the project directory
             ls
             git pull origin main # Pull the latest changes from the main branch
