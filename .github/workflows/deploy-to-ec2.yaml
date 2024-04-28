@@ -23,6 +23,9 @@ jobs:
       - name: Start Root Shell
         run: sudo -s # Start a root shell to run the following commands
 
+      - name: Show Folders
+        run: ls -la /var/www # List all files and folders in the /var/www directory
+
       - name: Change Directory
         run: cd /var/www/Lydiapp # Change to the project directory
 
