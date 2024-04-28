@@ -23,11 +23,11 @@ jobs:
       - name: Start Root Shell
         run: sudo -s # Start a root shell to run the following commands
 
-      - name: Check location
-        run: pwd # Check the current directory
+      -name: Go to root folder
+       run: cd /root
 
-      - name: Show Folders
-        run: ls /var/www # List all files and folders in the /var/www directory
+      - name: check location
+        run: pwd
 
       - name: Change Directory
         run: cd /var/www/Lydiapp # Change to the project directory
