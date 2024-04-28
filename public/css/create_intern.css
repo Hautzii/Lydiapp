@@ -22,11 +22,10 @@ label, input#profile_picture {
 }
 
 button {
-    /* background-color: #838cf1; */
-    background-color: red;
+    background-color: #838cf1;
     padding: .5rem 1rem;
     border-radius: .25rem;
     font-size: 1.2rem;
-    width: 100px;
+    width: 500px;
     margin-top: 1rem;
 }

@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }} # EC2 instance username
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Private SSH key stored as a GitHub secret
           script: |
-            sudo chown -R ${{ secrets.EC2_USERNAME }} /var/www/Lydiapp # Change the owner of the project directory
+            sudo chown -R ${{ secrets.EC2_USERNAME }}:${{ secrets.EC2_USERNAME}} /var/www/Lydiapp # Change the owner of the project directory
             sudo -s # Start a root shell to run the following commands
             cd /var/www/Lydiapp # Change to the project directory
             git pull origin main # Pull the latest changes from the main branch
