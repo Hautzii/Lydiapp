@@ -31,4 +31,6 @@ jobs:
             composer install --no-interaction --prefer-dist --optimize-autoloader # Install PHP dependencies
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
+            export PATH=$PATH:./node_modules/.bin # Add node_modules/.bin to the PATH
+            chmod +x ./node_modules/.bin/vite # Make sure vite has execute permissions
             npm install && npm run build # Install Node.js dependencies and compile assets
