@@ -27,9 +27,8 @@ jobs:
             curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - # Install Node.js and npm
             sudo apt-get install -y nodejs
             cd /var/www/Lydiapp # Change to the project directory
-            ls
             git pull origin main # Pull the latest changes from the main branch
             composer install --no-interaction --prefer-dist --optimize-autoloader # Install PHP dependencies
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
-            npm install && npm run production # Install Node.js dependencies and compile assets
+            npm install && npm run build # Install Node.js dependencies and compile assets
