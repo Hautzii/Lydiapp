@@ -21,13 +21,13 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Private SSH key stored as a GitHub secret
 
       - name: Start Root Shell
-        run: sudo -s
+        run: sudo -s # Start a root shell to run the following commands
 
       - name: Change Directory
-        run: cd /var/www/Lydiapp
+        run: cd /var/www/Lydiapp # Change to the project directory
 
       - name: Pull Changes from GitHub
-        run: git pull origin main
+        run: git pull origin main # Pull the latest changes from the main branch
 
       - name: Run Migrations
-        run: php artisan migrate --force
+        run: php artisan migrate --force # Run database migrations
