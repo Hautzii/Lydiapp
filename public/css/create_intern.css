@@ -22,7 +22,8 @@ label, input#profile_picture {
 }
 
 button {
-    background-color: #838cf1;
+    /* background-color: #838cf1; */
+    background-color: red;
     padding: .5rem 1rem;
     border-radius: .25rem;
     font-size: 1.2rem;
