@@ -1,3 +1,10 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,4 +31,3 @@ jobs:
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
             npm install && npm run production # Install Node.js dependencies and compile assets
-            php artisan migrate --force # Run database migrations
