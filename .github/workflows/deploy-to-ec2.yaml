@@ -25,4 +25,7 @@ jobs:
             git pull origin main # Pull the latest changes from the main branch
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
+            php artisan view:cache # Clear the view cache
+            php artisan cache:clear # Clear the application cache
+            php artisan migrate --force # Run the database migrations
             npm run build # Compile assets
