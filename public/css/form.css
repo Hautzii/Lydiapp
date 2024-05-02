@@ -24,5 +24,9 @@ img {
 }
 
 input {
-    border-radius: .25rem;
+    border-radius: .25rem !important;
+}
+
+.formation-name {
+    text-align: center !important;
 }

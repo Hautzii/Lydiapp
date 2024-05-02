@@ -42,15 +42,14 @@
                                 <div class="card rounded overflow-hidden m-2">
                                     <div class="{{ auth()->user() && auth()->user()->isAdmin() ? 'flex justify-center mt-4' : 'flex justify-center mt-custom' }}">
                                         <img class="object-cover rounded-full"
-                                            src="{{ asset('uploads/' . $intern->profile_picture) }}"
-                                            alt="{{ $intern->first_name }}">
+                                             src="{{ asset('uploads/' . ($intern->profile_picture ?? 'default.jpg')) }}"
+                                             alt="{{ $intern->first_name }}">
                                     </div>
                                     <div class="{{ auth()->user() && auth()->user()->isAdmin() ? 'px-6 py-4 mt-4 mt-custom' : 'px-6 py-4 mt-custom' }}">
                                         <h2 class="font-bold text-m mb-2">{{ $intern->last_name }}</h2>
                                         <h3 class="text-gray-700 text-s">{{ $intern->first_name }}</h3>
                                         <p class="text-gray-700 text-s">{{ $intern->phone_number }}</p>
                                         <p class="text-gray-700 text-s">{{ $intern->email }}</p>
-                                        {{-- <p class="text-gray-700 text-s">{{ $intern->formation->name }}</p> --}}
                                     </div>
                                     <div class="px-6 py-4 flex justify-end space-x-2">
                                         @if (auth()->user() && auth()->user()->isAdmin())

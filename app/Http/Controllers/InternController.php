@@ -55,18 +55,19 @@ class InternController extends Controller
             'formation_id' => 'required|exists:formations,id'
         ]);
 
+        $intern = new Intern($request->except('first_name', 'last_name', 'profile_picture', 'formation_id'));
+        $intern->first_name = ucfirst($request->input('first_name'));
+        $intern->last_name = strtoupper($request->input('last_name'));
+        $intern->formation_id = $request->input('formation_id');
+
         if($request->hasFile('profile_picture')) {
             $file = $request->file('profile_picture');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('uploads'), $filename);
-
-            $intern = new Intern($request->except('first_name', 'last_name', 'profile_picture', 'formation_id'));
             $intern->profile_picture = $filename;
-            $intern->first_name = ucfirst($request->input('first_name'));
-            $intern->last_name = strtoupper($request->input('last_name'));
-            $intern->formation_id = $request->input('formation_id');
-            $intern->save();
         }
+
+        $intern->save();
 
         return redirect()->route('interns.index')->with('success', 'Intern created successfully');
     }

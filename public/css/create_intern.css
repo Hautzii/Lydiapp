@@ -7,7 +7,12 @@ form {
 input {
     text-align: center;
     width: 300px;
-    border-radius: .25rem;
+    border-radius: .25rem !important;
+}
+
+select {
+    border-radius: .25rem !important;
+
 }
 
 input#first_name {
@@ -16,6 +21,10 @@ input#first_name {
 
 input#last_name {
     text-transform: uppercase;
+}
+
+input[type="file"] {
+    border-radius: 0 !important;
 }
 
 label, input#profile_picture {

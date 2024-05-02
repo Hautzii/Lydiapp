@@ -13,7 +13,7 @@
                         @csrf
                         @method('PATCH')
                         <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" value="{{$formation->name}}">
+                        <input type="text" id="name" name="name" class="formation-name" value="{{$formation->name}}">
                         <label for="start_date">Date de début :</label>
                         <input type="date" id="start_date" name="start_date" value="{{$formation->start_date}}">
                         <label for="end_date">Date de fin :</label>

@@ -12,7 +12,7 @@
                     <form action="{{route('formations.store')}}" method="post" class="flex flex-col">
                         @csrf
                         <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" class="formation-name">
                         <label for="start_date">Date de début :</label>
                         <input type="date" id="start_date" name="start_date">
                         <label for="end_date">Date de fin :</label>
