@@ -47,7 +47,7 @@ class InternController extends Controller
 
     public function store(Request $request): RedirectResponse {
         $request->validate([
-            'profile_picture' => 'required|image',
+            'profile_picture' => 'image',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'phone_number' => 'required|string',
