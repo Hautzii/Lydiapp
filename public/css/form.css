@@ -23,7 +23,7 @@ img {
     height: 200px;
 }
 
-input {
+input, select {
     border-radius: .25rem !important;
 }
 
