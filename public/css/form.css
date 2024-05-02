@@ -22,3 +22,7 @@ img {
     border-radius: .25rem;
     height: 200px;
 }
+
+input {
+    border-radius: .25rem;
+}
