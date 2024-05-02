@@ -12,25 +12,29 @@
                     <form action="{{ route('interns.update', $intern->id) }}" method="post" enctype="multipart/form-data" class="flex flex-col items-center">
                         @csrf
                         @method('PATCH')
-                        <label for="profile_picture" class="self-start">Photo de profil :</label>
-                        <img src="{{ asset('uploads/' . $intern->profile_picture) }}" alt="Current profile picture" class="mb-4">
-                        <div class="flex items-center justify-center w-full mb-4">
-                            <input type="file" id="profile_picture" name="profile_picture" class="text-center">
+                        <div class="flex flex-col items-center w-full">
+                            <label for="profile_picture" class="self-start text-center w-full">Photo de profil :</label>
+                            <img src="{{ asset('uploads/' . $intern->profile_picture) }}" alt="Current profile picture" class="mb-4">
+                            <div class="flex justify-center w-full">
+                                <input type="file" id="profile_picture" name="profile_picture" class="text-center mb-4">
+                            </div>
+                            <label for="first_name" class="self-start text-center w-full">Prénom :</label>
+                            <input type="text" id="first_name" name="first_name" value="{{$intern->first_name}}" class="mb-4 text-center rounded-sm interns w-full">
+                            <label for="last_name" class="self-start text-center w-full">Nom :</label>
+                            <input type="text" id="last_name" name="last_name" value="{{$intern->last_name}}" class="mb-4 text-center rounded-sm interns w-full">
+                            <label for="phone_number" class="self-start text-center w-full">Numéro de téléphone :</label>
+                            <input type="text" id="phone_number" name="phone_number" value="{{$intern->phone_number}}" class="mb-4 text-center rounded-sm interns w-full">
+                            <label for="email" class="self-start text-center w-full">Email :</label>
+                            <input type="email" id="email" name="email" value="{{$intern->email}}" class="mb-4 text-center rounded-sm interns w-full">
+                            <label for="formation_id" class="self-start text-center w-full">Formation :</label>
+                            <div class="w-1/2 mx-auto">
+                                <select id="formation_id" name="formation_id" class="mb-4 text-center rounded-sm w-full">
+                                    @foreach ($formations as $formation)
+                                        <option value="{{ $formation->id }}" {{ $intern->formation->id == $formation->id ? 'selected' : '' }}>{{ $formation->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                        <label for="first_name" class="self-start">Prénom :</label>
-                        <input type="text" id="first_name" name="first_name" value="{{$intern->first_name}}" class="mb-4 text-center rounded-sm interns">
-                        <label for="last_name" class="self-start">Nom :</label>
-                        <input type="text" id="last_name" name="last_name" value="{{$intern->last_name}}" class="mb-4 text-center rounded-sm interns">
-                        <label for="phone_number" class="self-start">Numéro de téléphone :</label>
-                        <input type="text" id="phone_number" name="phone_number" value="{{$intern->phone_number}}" class="mb-4 text-center rounded-sm interns">
-                        <label for="email" class="self-start">Email :</label>
-                        <input type="email" id="email" name="email" value="{{$intern->email}}" class="mb-4 text-center rounded-sm interns">
-                        <label for="formation_id" class="self-start">Formation :</label>
-                        <select id="formation_id" name="formation_id" class="mb-4 text-center rounded-sm">
-                            @foreach ($formations as $formation)
-                                <option value="{{ $formation->id }}" {{ $intern->formation->id == $formation->id ? 'selected' : '' }}>{{ $formation->name }}</option>
-                            @endforeach
-                        </select>
                         <button type="submit" class="submit_button">Envoyer</button>
                     </form>
                 </div>
