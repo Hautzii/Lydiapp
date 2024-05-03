@@ -19,16 +19,16 @@
                                 <input type="file" id="profile_picture" name="profile_picture" class="text-center mb-4">
                             </div>
                             <label for="first_name" class="self-start text-center w-full">Prénom :</label>
-                            <input type="text" id="first_name" name="first_name" value="{{$intern->first_name}}" class="mb-4 mt-2 text-center rounded-sm interns w-full">
+                            <input type="text" id="first_name" name="first_name" value="{{$intern->first_name}}" class="mb-4 mt-2 text-center rounded-custom interns w-full">
                             <label for="last_name" class="self-start text-center w-full">Nom :</label>
-                            <input type="text" id="last_name" name="last_name" value="{{$intern->last_name}}" class="mb-4 mt-2 text-center rounded-sm interns w-full">
+                            <input type="text" id="last_name" name="last_name" value="{{$intern->last_name}}" class="mb-4 mt-2 text-center rounded-custom interns w-full">
                             <label for="phone_number" class="self-start text-center w-full">Numéro de téléphone :</label>
-                            <input type="text" id="phone_number" name="phone_number" value="{{$intern->phone_number}}" class="mb-4 mt-2 text-center rounded-sm interns w-full">
+                            <input type="text" id="phone_number" name="phone_number" value="{{$intern->phone_number}}" class="mb-4 mt-2 text-center rounded-custom interns w-full">
                             <label for="email" class="self-start text-center w-full">Email :</label>
-                            <input type="email" id="email" name="email" value="{{$intern->email}}" class="mb-4 mt-2 text-center rounded-sm interns w-full">
+                            <input type="email" id="email" name="email" value="{{$intern->email}}" class="mb-4 mt-2 text-center rounded-custom interns w-full">
                             <label for="formation_id" class="self-start text-center w-full">Formation :</label>
-                            <div class="flex justify-center w-full">
-                                <select id="formation_id" name="formation_id" class="mb-4 mt-2 text-center rounded-sm w-1/2">
+                            <div class="flex justify-center">
+                                <select id="formation_id" name="formation_id" class="mb-4 mt-2 text-center rounded-custom">
                                     @foreach ($formations as $formation)
                                         <option value="{{ $formation->id }}" {{ $intern->formation->id == $formation->id ? 'selected' : '' }}>{{ $formation->name }}</option>
                                     @endforeach
