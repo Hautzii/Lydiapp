@@ -23,6 +23,10 @@ img {
     height: 200px;
 }
 
+select {
+    width: auto !important;
+}
+
 input, select {
     border-radius: .25rem !important;
 }
