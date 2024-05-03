@@ -7,6 +7,13 @@ button {
     margin-top: 1rem;
 }
 
+input {
+    padding: .5rem;
+    border-radius: .25rem;
+    margin-top: 1rem;
+    width: 300px;
+}
+
 form {
     display: flex;
     flex-direction: column;

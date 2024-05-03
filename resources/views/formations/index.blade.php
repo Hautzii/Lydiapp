@@ -13,10 +13,12 @@
                 @endif
             </div>
             <div>
-                <form method="GET" action="{{ route('formations.index') }}">
-                    <input class="search-bar" type="text" name="search" placeholder="Rechercher..."
+                <form method="GET" action="{{ route('formations.index') }}" class="relative">
+                    <input class="p-2 rounded border border-gray-900 w-full" type="text" name="search" placeholder="Rechercher..."
                            value="{{ request()->query('search') }}">
-                    <button type="submit"></button>
+                    <button type="submit" class="absolute right-0 top-0 mt-search mr-2">
+                        <img class="h-5" src="{{asset('/svg/search.svg')}}" alt="search icon">
+                    </button>
                 </form>
             </div>
         </div>
