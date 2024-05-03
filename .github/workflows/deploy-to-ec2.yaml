@@ -22,6 +22,7 @@ jobs:
           script: |
             sudo -s # Start a root shell to run the following commands
             cd /var/www/Lydiapp # Change to the project directory
+            git stash
             git pull origin main # Pull the latest changes from the main branch
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
