@@ -27,6 +27,10 @@ input, select {
     border-radius: .25rem !important;
 }
 
+select {
+    width: auto !important;
+}
+
 .formation-name {
     text-align: center !important;
 }
