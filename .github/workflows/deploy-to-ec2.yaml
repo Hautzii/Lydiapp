@@ -23,9 +23,10 @@ jobs:
             sudo -s # Start a root shell to run the following commands
             cd /var/www/Lydiapp # Change to the project directory
             git pull origin main # Pull the latest changes from the main branch
+            sudo chown -R www-data:www-data storage bootstrap/cache # Set the correct ownership
+            sudo chmod -R 775 storage bootstrap/cache # Set the correct permissions
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
             php artisan view:cache # Clear the view cache
             php artisan cache:clear # Clear the application cache
             php artisan migrate --force # Run the database migrations
-            npm run build # Compile assets
