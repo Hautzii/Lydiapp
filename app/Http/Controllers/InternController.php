@@ -56,7 +56,7 @@ class InternController extends Controller
         ]);
 
         $intern = new Intern($request->except('first_name', 'last_name', 'profile_picture', 'formation_id'));
-        $intern->first_name = ucfirst($request->input('first_name'));
+        $intern->first_name = ucfirst(strtolower($request->input('first_name')));
         $intern->last_name = strtoupper($request->input('last_name'));
         $intern->formation_id = $request->input('formation_id');
 
