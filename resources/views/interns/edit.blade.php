@@ -14,8 +14,7 @@
                         @method('PATCH')
                         <div class="flex flex-col items-center w-full">
                             <label for="profile_picture" class="self-start text-center w-full">Photo de profil :</label>
-                            <img src="{{ asset('uploads/' . $intern->profile_picture) }}" alt="Current profile picture" class="mb-4 rounded h-48">
-                            <div class="flex justify-center w-full">
+                            <img src="{{ asset('uploads/' . ($intern->profile_picture ? $intern->profile_picture : 'default.jpg')) }}" alt="Current profile picture" class="mb-4 rounded h-48">                            <div class="flex justify-center w-full">
                                 <input type="file" id="profile_picture" name="profile_picture" class="text-center mb-4">
                             </div>
                             <label for="first_name" class="self-start text-center w-full">Prénom :</label>
