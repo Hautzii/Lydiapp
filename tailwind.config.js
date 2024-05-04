@@ -12,11 +12,6 @@ module.exports = {
             colors: {
                 button: "#838cf1",
             },
-            textTransform: {
-                uppercase: "uppercase",
-                lowercase: "lowercase",
-                capitalize: "capitalize",
-            },
             fontFamily: {
                 sans: ["Figtree", "Arial", "sans-serif"],
             },

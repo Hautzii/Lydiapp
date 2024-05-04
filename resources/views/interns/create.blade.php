@@ -14,9 +14,9 @@
                         <label for="profile_picture" class="self-start text-center w-full">Photo de profil :</label>
                         <input type="file" id="profile_picture" name="profile_picture" class="text-center mb-4">
                         <label for="first_name" class="self-start text-center w-full">Prénom :</label>
-                        <input type="text" id="first_name" name="first_name" class="capitalize mb-4 mt-2 py-1 text-center rounded w-72 border p-2 border-gray-900">
+                        <input type="text" id="first_name" name="first_name" class="mb-4 mt-2 py-1 text-center rounded w-72 border p-2 border-gray-900" style="text-transform: capitalize">
                         <label for="last_name" class="self-start text-center w-full">Nom :</label>
-                        <input type="text" id="last_name" name="last_name" class="uppercase mb-4 mt-2 py-1 text-center rounded w-72 border p-2 border-gray-900">
+                        <input type="text" id="last_name" name="last_name" class="mb-4 mt-2 py-1 text-center rounded w-72 border p-2 border-gray-900" style="text-transform: uppercase">
                         <label for="phone_number" class="self-start text-center w-full">Numéro de téléphone :</label>
                         <input type="text" id="phone_number" name="phone_number" class="mb-4 mt-2 py-1 text-center rounded w-72 border p-2 border-gray-900">
                         <label for="email" class="self-start text-center w-full">Email :</label>
