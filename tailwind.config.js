@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'button': '#838cf1'
       },
+      textTransform: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
       fontFamily: {
         sans: ['Figtree', 'Arial', 'sans-serif'],
       },
