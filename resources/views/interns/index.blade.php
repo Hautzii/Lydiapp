@@ -93,5 +93,3 @@
         </div>
     </div>
 </x-app-layout>
-
-<link rel="stylesheet" href="{{ asset('css/main_intern.css') }}">
