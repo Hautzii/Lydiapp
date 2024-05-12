@@ -6,6 +6,8 @@
 
         <title>Lydiapp</title>
 
+        <link rel="stylesheet" href="/css/sizes.css">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -22,7 +24,7 @@
                     <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                         <h1 class="flex items-center justify-left text-black lg:justify-left lg:col-start-1">Lydiapp</h1>
                         <div class="flex lg:justify-center lg:col-start-2">
-                            <img src="/sasucat.png" alt="" class="sasucat text-black lg:h-16">
+                            <img src="/sasucat.png" alt="sasucat" class="sasucat">
                         </div>
                         @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-end">
@@ -58,5 +60,3 @@
         </div>
     </body>
 </html>
-
-<link rel="stylesheet" href="{{asset('/css/main_intern.css')}}">
