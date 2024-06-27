@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trombinoscope pour les stagiaires et les formations du centre M2i de Villeneuve d'Ascq.">
 
         <title>Lydiapp</title>
 
