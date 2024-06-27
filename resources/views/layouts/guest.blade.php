@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="description" content="Trombinoscope pour les stagiaires et les formations du centre M2i de Villeneuve d'Ascq.">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
