@@ -25,6 +25,7 @@ jobs:
             git pull origin main # Pull the latest changes from the main branch
             ${{ secrets.EC2_OWNERSHIP }} # Set the correct ownership
             ${{ secrets.EC2_PERMISSIONS }} # Set the correct permissions
+            npm run build
             php artisan config:cache # Clear the config cache
             php artisan route:cache # Clear the route cache
             php artisan view:cache # Clear the view cache
