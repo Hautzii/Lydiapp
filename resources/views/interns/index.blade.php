@@ -24,7 +24,7 @@
                     </a>
                 @endif
                 <div>
-                    <form method="GET" action="{{ route('formations.index') }}" class="relative">
+                    <form method="GET" action="{{ route('interns.index') }}" class="relative">
                         <input class="p-2 rounded border border-gray-900 w-full" type="text" name="search"
                             placeholder="Rechercher..." value="{{ request()->query('search') }}">
                         <button type="submit" class="absolute right-0 top-0 mt-search mr-2">
